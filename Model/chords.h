@@ -1,11 +1,19 @@
-#ifndef CHORDS_H
-#define CHORDS_H
+#pragma once
 
-
+#include <QStringList>
+#include <QDebug>
 class Chords
 {
 public:
     Chords();
+    const QStringList& getChordList();
+    ~Chords();
+private:
+
+    QStringList chordList;
+
+    void populateChordList(const QStringList &);
 };
 
-#endif // CHORDS_H
+
+
